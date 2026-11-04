@@ -1,0 +1,9 @@
+{
+  "Name": "Restaurant Robot Helper",
+  "Author": "Bentley Playz",
+  "Version": "1.0.0",
+  "Description": "Places the Restaurant Robot by hand on days when the game gave him no schedule.",
+  "UniqueID": "BentleyPlayz.RobotHelper",
+  "EntryDll": "RobotHelper.dll",
+  "MinimumApiVersion": "4.0.0"
+}
