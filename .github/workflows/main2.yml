@@ -1,0 +1,43 @@
+build
+failed now in 41s
+Search logs
+1s
+5s
+26s
+Run actions/setup-dotnet@v4
+(node:8540) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+"C:\Program Files\PowerShell\7\pwsh.exe" -NoLogo -Sta -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command & 'D:\a\_actions\actions\setup-dotnet\v4\externals\install-dotnet.ps1' -SkipNonVersionedFiles -Runtime dotnet -Channel LTS
+dotnet-install: .NET Core Runtime with version '10.0.14' is already installed.
+"C:\Program Files\PowerShell\7\pwsh.exe" -NoLogo -Sta -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command & 'D:\a\_actions\actions\setup-dotnet\v4\externals\install-dotnet.ps1' -SkipNonVersionedFiles -Channel 6.0
+dotnet-install: Downloaded file https://builds.dotnet.microsoft.com/dotnet/Sdk/6.0.428/dotnet-sdk-6.0.428-win-x64.zip size is 265214223 bytes.
+dotnet-install: Either downloaded or local package size can not be measured. One of them may be corrupted.
+dotnet-install: Extracting the archive.
+dotnet-install: Note that the script does not ensure your Windows version is supported during the installation.
+dotnet-install: To check the list of supported versions, go to https://learn.microsoft.com/dotnet/core/install/windows#supported-versions
+dotnet-install: Installed version is 6.0.428
+dotnet-install: Installation finished
+4s
+Run dotnet restore RobotHelper/RobotHelper.csproj
+  
+MSBUILD : error MSB1009: Project file does not exist.
+Switch: RobotHelper/RobotHelper.csproj
+Error: Process completed with exit code 1.
+0s
+0s
+0s
+2s
+Post job cleanup.
+"C:\Program Files\Git\bin\git.exe" version
+git version 2.56.0.windows.4
+Temporarily overriding HOME='D:\a\_temp\698efbeb-f75c-43e5-ad8b-23ee1df60af7' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\ma\ma
+"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+http.https://github.com/.extraheader
+"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
