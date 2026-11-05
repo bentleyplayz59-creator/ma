@@ -1,34 +1,34 @@
-name: Build Stardew Valley Mod
+
+name: Build RobotHelper
 
 on:
   push:
-    branches: [ "main", "master" ]
+    branches: [ main, master ]
   pull_request:
-    branches: [ "main", "master" ]
+    branches: [ main, master ]
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '6.0.x' # Adjust to '8.0.x' or your project's target framework if needed
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.0.x'
 
-    - name: Restore dependencies
-      run: dotnet restore RobotHelper/RobotHelper.csproj
+      - name: Restore dependencies
+        run: dotnet restore RobotHelper.csproj
 
-    - name: Build project
-      run: dotnet build RobotHelper/RobotHelper.csproj --configuration Release --no-restore
+      - name: Build project
+        run: dotnet build RobotHelper.csproj --configuration Release --no-restore
 
-    - name: Upload Build Artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: RobotHelper-Release
-        path: |
-          RobotHelper/bin/Release/**
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: RobotHelper-Release
+          path: bin/Release/
